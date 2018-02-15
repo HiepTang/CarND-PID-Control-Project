@@ -4,8 +4,11 @@ Self-Driving Car Engineer Nanodegree Program
 The purpose of this project is to build a PID controller and tune the PID hyperparameters by applying the general processing as described in the PID Control lesssion
 ## PID Controller description and hyperparameters tuning
 ### P (Proportional) Control
-Proportional (P) control helps a car can keep a distance with the lane based on cross track error (CTE). I need to tune the proportional (P) factor to keep the car in the center of the road. If this parameter is so big, the car will go over the left or side of the road. And if this parameters is so small, the car is not in the center and it cannot pass the curve. I set the I and D parameters to 0 in order to find a good P factor value, and finally set it to 0.224
-### D (
+Proportional (P) control helps the car can keep a distance with the lane based on cross track error (CTE). I need to tune the proportional (P) factor to keep the car in the center of the road. If this parameter is so big, the car will go over the left or side of the road. And if this parameters is so small, the car is not in the center and it cannot pass the curve. I set the I and D parameters to 0 in order to find a good P factor value, and finally set it to 0.224
+### D (Differential) Control
+Differential (D) control helps the car to reduce the overshooting and fast oscillation with the P controller. It helps the car run smoothly on the center line. If the D factor parameter is so small, the car cannot go safely or go like a snake. If it is so big, the car also move like a snake and may be overshooted to the lane line. Finally, I set the D factor parameters is 2.4
+### I (Integral) Control
+Integral (I) control helps to solve the systematic bias problem that the PD controller cannot solve it. I choose this parameter is very small about 0.0004.
 
 ---
 
